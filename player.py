@@ -2,9 +2,8 @@ import pygame
 from settings import *
 
 class Player:
-    def __init__(self):
-        self.image = pygame.image.load("assets/plane.png")
-        self.image = pygame.transform.scale(self.image, (60, 60))
+    def __init__(self, image):
+        self.image = pygame.transform.scale(image, (60, 60))
 
         self.rect = self.image.get_rect()
         self.rect.center = (WIDTH//2, HEIGHT - 70)
